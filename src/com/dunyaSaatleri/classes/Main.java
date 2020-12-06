@@ -47,8 +47,10 @@ public class Main {
             String[] cityCode = chooseCity.split(",");
 
             ExecutorService executorService = Executors.newFixedThreadPool(cityCode.length);
-            if (cityCode.length<3 && cityCode.length>5){
-                keepRunning=false;
+            if (cityCode.length<3 || cityCode.length>5){
+                System.out.println("Hatalı sayıda şehir kodu girdin ");
+                System.out.println("Hatırlatma : 3 veya daha fazla şehir kodu seç(Maksimum 5 adet)");
+
             }
             else{
                 boolean kontrol=true;
@@ -61,34 +63,40 @@ public class Main {
                                     executorService.execute(rn1);
                                     berlin.showTime();
                                     Thread.sleep(350);
+
                                     break;
                                 case "MOW":
                                     Runnable rn2 = new ThreadPool(moskow.getCityCode());
                                     executorService.execute(rn2);
                                     moskow.showTime();
                                     Thread.sleep(350);
+
                                     break;
                                 case "NYC":
                                     Runnable rn3 = new ThreadPool(newYork.getCityCode());
                                     executorService.execute(rn3);
                                     newYork.showTime();
                                     Thread.sleep(350);
+
                                     break;
                                 case "LON":
                                     Runnable rn4 = new ThreadPool(london.getCityCode());
                                     executorService.execute(rn4);
                                     london.showTime();
                                     Thread.sleep(350);
+
                                     break;
                                 case "DEL":
                                     Runnable rn5 = new ThreadPool(newDelhi.getCityCode());
                                     executorService.execute(rn5);
                                     newDelhi.showTime();
                                     Thread.sleep(350);
+
                                     break;
 
                                 default:
-                                    throw new IllegalStateException("Unexpected value: " + w);
+                                    throw new IllegalStateException("Unexpected value: ");
+
                             }
                         }
 
