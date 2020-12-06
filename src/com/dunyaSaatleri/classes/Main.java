@@ -60,31 +60,31 @@ public class Main {
                                     Runnable rn1 = new ThreadPool(berlin.cityCode);
                                     executorService.execute(rn1);
                                     berlin.showTime();
-                                    Thread.sleep(1000);
+                                    Thread.sleep(350);
                                     break;
                                 case "MOW":
                                     Runnable rn2 = new ThreadPool(moskow.getCityCode());
                                     executorService.execute(rn2);
                                     moskow.showTime();
-                                    Thread.sleep(1000);
+                                    Thread.sleep(350);
                                     break;
                                 case "NYC":
                                     Runnable rn3 = new ThreadPool(newYork.getCityCode());
                                     executorService.execute(rn3);
                                     newYork.showTime();
-                                    Thread.sleep(1000);
+                                    Thread.sleep(350);
                                     break;
                                 case "LON":
                                     Runnable rn4 = new ThreadPool(london.getCityCode());
                                     executorService.execute(rn4);
                                     london.showTime();
-                                    Thread.sleep(1000);
+                                    Thread.sleep(350);
                                     break;
                                 case "DEL":
                                     Runnable rn5 = new ThreadPool(newDelhi.getCityCode());
                                     executorService.execute(rn5);
                                     newDelhi.showTime();
-                                    Thread.sleep(1000);
+                                    Thread.sleep(350);
                                     break;
 
                                 default:
