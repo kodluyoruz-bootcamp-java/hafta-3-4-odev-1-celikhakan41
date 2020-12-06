@@ -50,6 +50,7 @@ public class Main {
             if (cityCode.length<3 || cityCode.length>5){
                 System.out.println("Hatalı sayıda şehir kodu girdin ");
                 System.out.println("Hatırlatma : 3 veya daha fazla şehir kodu seç(Maksimum 5 adet)");
+                System.out.println("---------------------------------------");
 
             }
             else{
@@ -103,6 +104,7 @@ public class Main {
 
                     } catch (Exception e) {
                         System.out.println("Fazla veya eksik sayıda kod girdiniz.");
+
                         kontrol=false;
                     }
 
